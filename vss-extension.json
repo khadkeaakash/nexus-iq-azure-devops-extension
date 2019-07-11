@@ -1,6 +1,6 @@
 {
   "manifestVersion": 1,
-  "id": "nexus-azure-devops-extension",
+  "id": "nexus-iq-azure-devops-extension",
   "version": "68.0",
   "name": "Nexus IQ for Azure DevOps",
   "description": "Nexus IQ policy evaluations for Azure DevOps",
@@ -17,7 +17,7 @@
     "vso.work"
   ],
   "categories": [
-        "Build and release"
+        "Azure Pipelines"
   ],
   "files": [
     { "path": "iqtask" }
