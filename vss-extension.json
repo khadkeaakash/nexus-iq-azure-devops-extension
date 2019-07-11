@@ -1,7 +1,7 @@
 {
   "manifestVersion": 1,
   "id": "nexus-iq-azure-devops-extension",
-  "version": "68.0",
+  "version": "68.0.1",
   "name": "Nexus IQ for Azure DevOps",
   "description": "Nexus IQ policy evaluations for Azure DevOps",
   "publisher": "MauryCupitt",
