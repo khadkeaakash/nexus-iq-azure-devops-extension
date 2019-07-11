@@ -38,4 +38,4 @@ in the build task. Of course you can override this as required.
 
 You can now test the extension as a build step. Simply search 'Nexus IQ for Azure Devops'. Follow the required fields note http: is required in the server field.
 
-
+[![DepShield Badge](https://depshield.sonatype.org/badges/maurycupitt/nexus-iq-azure-devops-extension/depshield.svg)](https://depshield.github.io)
