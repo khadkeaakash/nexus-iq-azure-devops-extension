@@ -13,8 +13,8 @@
     ],
     "author": "Sonatype",
     "version": {
-        "Major": 51,
-        "Minor": 29,
+        "Major": 68,
+        "Minor": 0,
         "Patch": 0
     },
     "demands": [
