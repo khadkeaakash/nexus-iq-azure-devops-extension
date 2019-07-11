@@ -1,0 +1,88 @@
+{
+    "id": "39419724-4d2d-475e-8b12-b5ba228602b5",
+    "name": "Nexus IQ for Azure DevOps",
+    "friendlyName": "Nexus IQ for Azure DevOps",
+    "description": "Nexus IQ Policy Evaluation Task",
+    "category": "Utililty",
+    "visibility": [
+        "Build",
+        "Release"
+    ],
+    "runsOn": [
+        "Agent"
+    ],
+    "author": "Sonatype",
+    "version": {
+        "Major": 51,
+        "Minor": 29,
+        "Patch": 0
+    },
+    "demands": [
+        "node.js",
+        "java"
+    ],
+    "instanceNameFormat": "Nexus IQ Policy Evaluation",
+    "inputs": [
+        {
+            "name": "serverUrl",
+            "type": "string",
+            "label": "Server Url",
+            "defaultValue": "",
+            "required": true
+        },
+        {
+            "name": "serverUsername",
+            "type": "string",
+            "label": "Username",
+            "defaultValue": "",
+            "required": true
+        },
+        {
+            "name": "serverPassword",
+            "type": "password",
+            "label": "Password",
+            "isConfidential": true,
+            "defaultValue": "$(iq_password)",
+            "required": true
+        },
+        {
+            "name": "applicationId",
+            "type": "string",
+            "label": "Application ID",
+            "defaultValue": "",
+            "required": true
+        },
+        {
+            "name": "scanDirectory",
+            "type": "string",
+            "label": "Directory in which to begin the scan",
+            "defaultValue": "%SYSTEM_DEFAULTWORKINGDIRECTORY%",
+            "required": true
+        },
+        {
+            "name": "stage",
+            "type": "radio",
+            "label": "Stage",
+            "defaultValue": "build",
+            "options": {
+                "build": "Build",
+                "stage-release": "Stage",
+                "release": "Release"
+            },
+            "required": true
+        },
+        {
+            "name": "scanTargets",
+            "type": "string",
+            "label": "Scan Targets",
+            "defaultValue": "**\\*.nupkg,**\\*.js",
+            "helpMarkDown": "Comma separated list of scan targets.",
+            "required": true
+        }
+    ],
+    "execution": {
+        "Node": {
+            "target": "iqtask.js"
+        }
+    }
+}
